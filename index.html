@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Text Encrypter 🔐</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-card">
+        <!-- Header -->
+        <header class="app-header">
+            <span class="badge">Saran No. 112</span>
+            <h1>🔐 CAESAR CIPHER</h1>
+            <p>Ubah teks biasa menjadi kode rahasia atau sebaliknya!</p>
+        </header>
+
+        <!-- Control Bar (Mode & Shift Key) -->
+        <div class="control-bar">
+            <!-- Mode Switcher -->
+            <div class="mode-toggle">
+                <button type="button" id="btn-encrypt" class="mode-btn active">🔒 Enkripsi</button>
+                <button type="button" id="btn-decrypt" class="mode-btn">🔓 Dekripsi</button>
+            </div>
+
+            <!-- Shift Key Selector -->
+            <div class="shift-group">
+                <label for="shift-input">Kunci Geser (Shift):</label>
+                <input type="number" id="shift-input" value="3" min="1" max="25">
+            </div>
+        </div>
+
+        <!-- Input Textarea -->
+        <div class="input-section">
+            <label for="input-text" id="input-label">Teks Asli (Plaintext):</label>
+            <textarea id="input-text" placeholder="Ketik pesan rahasiamu di sini..."></textarea>
+        </div>
+
+        <!-- Output Result Box -->
+        <div class="output-section">
+            <div class="output-header">
+                <span id="output-label">Hasil Kode Rahasia (Ciphertext):</span>
+                <button type="button" id="copy-btn" class="btn-copy">📋 Salin</button>
+            </div>
+            <div class="output-box" id="output-box">
+                <span class="placeholder-text">Hasil akan muncul otomatis di sini...</span>
+            </div>
+        </div>
+
+        <!-- Toast Notification -->
+        <div id="toast" class="toast hidden">Hasil berhasil disalin! 🚀</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
